@@ -209,7 +209,7 @@ pub struct AudioSpecDesired<T: AudioFormatNum<T>, CB: AudioCallback<T>> {
     pub channels: u8,
     pub samples: u16,
     pub callback: CB,
-    _marker : PhantomData<T>
+    pub _marker : PhantomData<T>
 }
 
 impl<T: AudioFormatNum<T>, CB: AudioCallback<T>> AudioSpecDesired<T, CB> {
